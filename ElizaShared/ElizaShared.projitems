@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>60c3bb06-730a-49c0-b47c-a538b08ba693</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Eliza</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Cells\SlipCellBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cells\SlipCellDatum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cells\SlipCellHeader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Cells\SlipCellListName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SequentialReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SlipList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SlipProcessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SlipReader.cs" />
+  </ItemGroup>
+</Project>
