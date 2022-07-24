@@ -111,7 +111,7 @@ public static class SlipReader
                 throw new FormatException("Unexpected end of input - no description list found");
         } while (char.IsWhiteSpace((char) ch));
 
-        if (ch != 0)
+        if (ch != '(')
             throw new FormatException("No valid description list found - '(' expected.");
 
         ListRead(descriptionList, inputString, true);

@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{E60C
 		Scripts\Doctor.script = Scripts\Doctor.script
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DDCFC15B-D1AF-4185-A347-3FEDB4B16519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElizaTests", "ElizaTests\ElizaTests.csproj", "{7166F499-7C25-42E9-AB33-073A6343C9A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,15 +26,23 @@ Global
 		{888244F6-7B81-4EE1-90A6-0303A7D7AFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{888244F6-7B81-4EE1-90A6-0303A7D7AFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{888244F6-7B81-4EE1-90A6-0303A7D7AFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7166F499-7C25-42E9-AB33-073A6343C9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7166F499-7C25-42E9-AB33-073A6343C9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7166F499-7C25-42E9-AB33-073A6343C9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7166F499-7C25-42E9-AB33-073A6343C9A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7166F499-7C25-42E9-AB33-073A6343C9A5} = {DDCFC15B-D1AF-4185-A347-3FEDB4B16519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7FAC68E-ECC7-4D16-89D3-145AA05C6ACC}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		ElizaShared\ElizaShared.projitems*{60c3bb06-730a-49c0-b47c-a538b08ba693}*SharedItemsImports = 13
+		ElizaShared\ElizaShared.projitems*{7166f499-7c25-42e9-ab33-073a6343c9a5}*SharedItemsImports = 5
 		ElizaShared\ElizaShared.projitems*{888244f6-7b81-4ee1-90a6-0303a7d7afdc}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

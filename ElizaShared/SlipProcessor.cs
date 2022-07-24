@@ -400,15 +400,29 @@ public static class SlipProcessor
                         if (nextRule is not null)
                         {
                             // a word is found, let's check if the pattern is buildable
-                            var inputCopy = inputReader.ReaderCopy();
-                            var nextInput = inputCopy.SequenceLinearElementRight();
+                            var testReader = inputReader.ReaderCopy();
+                            var nextInput = testReader.SequenceLinearElementRight();
                             while (!IsMatch(nextRule.Datum, nextInput))
                             {
                                 if (nextInput is null)
                                     return false; // whoops, no such word in the input
 
                                 requiredNumber--;
-                                nextInput = inputCopy.SequenceLinearElementRight();
+                                nextInput = testReader.SequenceLinearElementRight();
+                            }
+
+                            switch (requiredNumber)
+                            {
+                                case > 0:
+                                    return false; // requested word was found too soon
+
+                                case 0:
+                                    result.NewBottom(new SlipList());
+                                    continue; // word is found, but '0' spec is empty this time
+
+                                default:
+                                    requiredNumber = -requiredNumber;
+                                    break;
                             }
                         }
                         else if (requiredNumber != 0)
@@ -434,7 +448,8 @@ public static class SlipProcessor
             else
             {
                 // string literal spec
-                var datumCell = inputReader.SequenceLinearElementRight();
+                var testReader = inputReader.ReaderCopy();
+                var datumCell = testReader.SequenceLinearElementRight();
                 if (!IsMatch(spec.Datum, datumCell))
                     return false;
 
@@ -499,7 +514,7 @@ public static class SlipProcessor
 
         var hashSource = datum[^6..];
         var encoded = hashSource.Select(EncodeHollerith);
-        return Hash(ulong.Parse(string.Join("", encoded), CultureInfo.CurrentCulture), rank);
+        return Hash(Convert.ToUInt64(string.Join("", encoded), 8), rank);
     }
 
     /// <summary>

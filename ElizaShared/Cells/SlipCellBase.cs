@@ -103,6 +103,7 @@ public abstract class SlipCellBase
 
         list.Top.Left = this;
         list.Bottom.Right = Right;
+        Right.Left = list.Bottom;
         Right = list.Top;
 
         return list.EmptyList();
@@ -121,6 +122,7 @@ public abstract class SlipCellBase
 
         list.Top.Left = Left;
         list.Bottom.Right = this;
+        Left.Right = list.Top;
         Left = list.Bottom;
 
         return list.EmptyList();
