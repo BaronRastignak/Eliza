@@ -530,7 +530,7 @@ public static class SlipProcessor
         return (int) (d & ((1ul << n) - 1)); // mask off all but n least sig. bits
     }
 
-    private static int EncodeHollerith(char c)
+    private static int? EncodeHollerith(char c)
     {
         switch (c)
         {
@@ -638,8 +638,7 @@ public static class SlipProcessor
             case ',': return 73;
             case '(': return 74;
 
-            default:
-                throw new InvalidOperationException($"Character '{c}' is outside recognized set");
+            default: return null;
         }
     }
 }

@@ -9,12 +9,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ElizaShared", "ElizaShared\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{E60C725C-B65F-4F3C-ABE3-4C591DBD0DB4}"
 	ProjectSection(SolutionItems) = preProject
+		Scripts\Doctor.1966.script = Scripts\Doctor.1966.script
 		Scripts\Doctor.script = Scripts\Doctor.script
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DDCFC15B-D1AF-4185-A347-3FEDB4B16519}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElizaTests", "ElizaTests\ElizaTests.csproj", "{7166F499-7C25-42E9-AB33-073A6343C9A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElizaTests", "ElizaTests\ElizaTests.csproj", "{7166F499-7C25-42E9-AB33-073A6343C9A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

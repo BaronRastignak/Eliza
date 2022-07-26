@@ -19,6 +19,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>Scripts\Doctor.script</TargetPath>
     </Content>
+
+    <Content Include="..\Scripts\Doctor.1966.script" />
+    <Content Update="..\Scripts\Doctor.1966.script">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Scripts\Doctor.1966.script</TargetPath>
+    </Content>
   </ItemGroup>
 
 </Project>
